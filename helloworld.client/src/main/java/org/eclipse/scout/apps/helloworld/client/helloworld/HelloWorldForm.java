@@ -17,6 +17,7 @@ import org.eclipse.scout.rt.platform.BEANS;
 import org.eclipse.scout.rt.platform.Order;
 import org.eclipse.scout.rt.platform.text.TEXTS;
 import org.eclipse.scout.rt.shared.AbstractIcons;
+import org.eclipse.scout.apps.helloworld.client.helloworld.HelloWorldForm.MainBox.TopBox.YesButton;
 
 /**
  * @author austin
@@ -49,6 +50,10 @@ public class HelloWorldForm extends AbstractForm {
 
 	public HelloButton getHelloButton() {
 		return getFieldByClass(HelloButton.class);
+	}
+
+	public YesButton getYesButton() {
+		return getFieldByClass(YesButton.class);
 	}
 
 	public TopBox getTopBox() {
@@ -88,6 +93,18 @@ public class HelloWorldForm extends AbstractForm {
 				}
 			}
 
+			@Order(1500)
+			public class YesButton extends AbstractButton {
+				@Override
+				protected String getConfiguredLabel() {
+					return TEXTS.get("Yes");
+				}
+
+				@Override
+				protected void execClickAction() {
+				}
+			}
+			
 			@Order(2000)
 			public class HelloButton extends AbstractButton {
 				@Override
