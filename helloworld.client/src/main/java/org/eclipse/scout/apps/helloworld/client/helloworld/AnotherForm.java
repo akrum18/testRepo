@@ -22,7 +22,7 @@ public class AnotherForm extends AbstractForm {
 	@Override
 	protected String getConfiguredTitle() {
 		// TODO [austin] verify translation
-		return TEXTS.get("Another");
+		return TEXTS.get("Fyorm");
 	}
 
 	public void startModify() {
